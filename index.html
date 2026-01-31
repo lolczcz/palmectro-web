@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palmectro a.s. | Oficiální web</title>
+  <style>
+    :root {
+      --bg: #020617;
+      --panel: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.15);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #020617, var(--bg));
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: linear-gradient(180deg, rgba(2,6,23,0.9), rgba(2,6,23,0.6)), url('https://images.unsplash.com/photo-1581091012184-5c7c9d8fa6b4');
+      background-size: cover;
+      background-position: center;
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      max-width: 750px;
+      margin: 1rem auto 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    nav {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+    }
+
+    nav a:hover {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    section p {
+      color: var(--muted);
+    }
+
+    /* ===== GRID & CARDS ===== */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--card), var(--panel));
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(56,189,248,0.15), transparent 60%);
+      pointer-events: none;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.8rem 1.4rem;
+      border-radius: 0.9rem;
+      background: var(--accent);
+      color: #020617;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 25px rgba(56,189,248,0.35);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 35px rgba(56,189,248,0.45);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      box-shadow: none;
+    }
+
+    /* ===== STATS ===== */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .stat {
+      background: var(--panel);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .stat strong {
+      font-size: 2rem;
+      display: block;
+      color: var(--accent);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #020617;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid #020617;
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Palmectro a.s.</h1>
+  <p>Oficiální roleplay akciová společnost zaměřená na energetiku, elektrotechniku a správu klíčové infrastruktury.</p>
+  <nav>
+    <a href="#o-nas">O nás</a>
+    <a href="#sluzby">Služby</a>
+    <a href="#struktura">Struktura</a>
+    <a href="#kariera">Kariéra</a>
+    <a href="#login">Interní zóna</a>
+  </nav>
+</header>
+
+<section id="o-nas">
+  <h2>O společnosti</h2>
+  <p>Palmectro a.s. působí jako stabilní a respektovaná firma v rámci roleplay světa. Zaměřujeme se na realistické firemní RP, dlouhodobé zakázky a profesionální vystupování vůči státu i soukromému sektoru.</p>
+
+  <div class="stats">
+    <div class="stat"><strong>12+</strong> aktivních zaměstnanců</div>
+    <div class="stat"><strong>80+</strong> realizovaných zakázek</div>
+    <div class="stat"><strong>5 let</strong> působení na trhu</div>
+  </div>
+</section>
+
+<section id="sluzby">
+  <h2>Naše služby</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Energetika</h3>
+      <p>Správa elektrických sítí, rozvoden a krizové zásahy při výpadcích infrastruktury.</p>
+    </div>
+    <div class="card">
+      <h3>Průmyslové zakázky</h3>
+      <p>Dodávky elektrotechniky a technická podpora pro státní i soukromé instituce.</p>
+    </div>
+    <div class="card">
+      <h3>Speciální projekty</h3>
+      <p>Dlouhodobé RP projekty ve spolupráci s vládními složkami a městem.</p>
+    </div>
+  </div>
+</section>
+
+<section id="struktura">
+  <h2>Firemní struktura</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Generální ředitel</h3>
+      <p>Nejvyšší vedení společnosti, strategické rozhodování a reprezentace firmy.</p>
+    </div>
+    <div class="card">
+      <h3>Manažer</h3>
+      <p>Řízení týmů, plánování zakázek, kontrola kvality a komunikace se zaměstnanci.</p>
+    </div>
+    <div class="card">
+      <h3>Zaměstnanec</h3>
+      <p>Výkon práce v terénu, účast na RP akcích a realizace zakázek.</p>
+    </div>
+  </div>
+</section>
+
+<section id="kariera">
+  <h2>Kariéra v Palmectro</h2>
+  <div class="card">
+    <p>Hledáme spolehlivé a aktivní hráče, kteří chtějí budovat realistickou firmu. Nabízíme kariérní růst, stabilní zázemí a pravidelné firemní RP.</p>
+    <a class="btn" href="#login">Mám zájem</a>
+  </div>
+</section>
+
+<section id="login">
+  <h2>Interní zóna</h2>
+  <div class="card">
+    <p>Přístup do interního systému společnosti. Přihlášení probíhá přes Discord (OAuth2).</p>
+    <a class="btn secondary" href="#">Přihlásit se přes Discord</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 <span>Palmectro a.s.</span> – Roleplay projekt. Všechna práva vyhrazena.
+</footer>
+
+</body>
+</html>
